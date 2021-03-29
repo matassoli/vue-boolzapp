@@ -203,11 +203,11 @@ footer i {
   font-size: 14px;
 }
 
-.contacts a {
+.contacts__container a {
   text-decoration: none;
   color: #000;
 }
 
-.contacts a .contact:active {
+.contacts__container a .contact:active {
   background-color: #EAEAEA;
 }

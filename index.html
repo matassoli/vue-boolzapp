@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <main>
+  <main id="root">
 
     <div class="main__sx">
 
@@ -35,37 +35,23 @@
           <span>Ricevi notifiche di nuovi messaggi</span>
           <span><a href="#">Attiva notifiche desktop</a></span>
         </div>
-
       </div>
+
       <div class="search">
         <button><i class="fas fa-search"></i></button> <input placeholder="Cerca o inizia una nuova chat">
       </div>
 
-      <div class="contacts">
-        <a href="#">
-          <div class="contact">
-            <img src="img/avatar_3.jpg" alt=""><span>Michele</span>
+<div class="contacts__container">
+      <a href="#">
+        <div class="contacts">
+          <div v-for="(item, index) in contacts" class="contact">
+            <img v-bind:src="contacts[index].avatar"><span>{{ contacts[index].name }}</span>
           </div>
-        </a>
-        <a href="#">
-          <div class="contact">
-            <img src="img/avatar_4.jpg" alt=""><span>Michele</span>
-          </div>
-        </a>
-        <a href="#">
-          <div class="contact">
-            <img src="img/avatar_5.jpg" alt=""><span>Michele</span>
-          </div>
-        </a>
-        <a href="#">
-          <div class="contact">
-            <img src="img/avatar_6.jpg" alt=""><span>Michele</span>
-          </div>
-        </a>
-      </div>
-
-
+        </div>
+      </a>
     </div>
+  </div>
+
     <div class="main__dx">
       <header>
         <div class="user">
@@ -81,7 +67,6 @@
       </header>
 
       <div class="text__area">
-
         <div class="user__txt">
           Ciaoooooooo
           <div class="txt__date">30/03/2021 10:30:55</div>
@@ -106,20 +91,14 @@
           Boh!
           <div class="txt__date">30/03/2021 10:30:55</div>
         </div>
-
-
-
-
       </div>
 
       <footer>
-
         <i class="far fa-smile"></i>
 
         <input type="text" placeholder="Scrivi un messaggio">
 
         <i class="fas fa-microphone"></i>
-
       </footer>
 
     </div>
@@ -130,8 +109,8 @@
 
 
 
-    <script src="js/script.js"></script>
   </main>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
