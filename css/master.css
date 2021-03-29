@@ -14,13 +14,13 @@ body {
 main {
   height: 100%;
   padding: 20px 0;
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
 .main__sx {
   background-color: yellow;
-  width: 29%;
+  width: 30%;
   height: 100%;
   float: left;
 }
@@ -30,4 +30,41 @@ main {
   width: 69%;
   height: 100%;
   float: left;
+}
+
+header {
+  height: 80px;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  height: 60px;
+  width: auto;
+  border-radius: 100%;
+  margin: 10px;
+}
+.user span {
+  font-weight: 700;
+}
+
+.icons i {
+  padding: 10px;
+  color: #B1B1B1;
+}
+
+.notification {
+  background-color: #8EDAFC;
+  height: 60px;
+}
+
+input {
+  width: 100%;
 }
