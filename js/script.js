@@ -1,5 +1,5 @@
 var app = new Vue({
-  el: "#todo__list",
+  el: "#xxx",
   data: {
     contacts: [{
         name: 'Michele',

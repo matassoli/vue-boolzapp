@@ -19,7 +19,7 @@ main {
 }
 
 .main__sx {
-  background-color: yellow;
+  background-color: #F3EEEA;
   width: 30%;
   height: 100%;
   float: left;
@@ -30,6 +30,10 @@ main {
   width: 69%;
   height: 100%;
   float: left;
+}
+
+.main__dx header {
+  border-left: 1px solid rgba(177, 177, 177, 0.5);
 }
 
 header {
@@ -51,6 +55,7 @@ header {
   border-radius: 100%;
   margin: 10px;
 }
+
 .user span {
   font-weight: 700;
 }
@@ -63,8 +68,46 @@ header {
 .notification {
   background-color: #8EDAFC;
   height: 60px;
+  padding: 10px;
+  display: flex;
+}
+
+.notification__icon {
+  height: 40px;
+  width: 40px;
+  color: #8EDAFC;
+  background-color: #FFF;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification span {
+  padding: 10px;
+  font-size: 14px;
+  vertical-align: super;
+  line-height: 1px;
+  display: block;
+}
+
+.user__text span {
+  display: block;
+}
+
+.user__text span:last-child {
+  font-size: 12px;
+  color: #B1B1B1;
+}
+
+.notification__text a {
+  font-size: 10px;
+  text-decoration: underline;
+  opacity: 0.6;
 }
 
 input {
-  width: 100%;
+  width: calc(100% - 10px);
+  margin: 5px;
+  height: 25px;
 }
