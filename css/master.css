@@ -1,0 +1,33 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to top, #DBDBD2 75%, #009688 50%);
+  height: 99vh;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  padding: 20px 0;
+  width: 70%;
+  margin: auto;
+}
+
+.main__sx {
+  background-color: yellow;
+  width: 29%;
+  height: 100%;
+  float: left;
+}
+
+.main__dx {
+  background-color: green;
+  width: 69%;
+  height: 100%;
+  float: left;
+}
