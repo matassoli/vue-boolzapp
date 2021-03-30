@@ -157,7 +157,7 @@ footer i {
   cursor: pointer;
 }
 
-.contact__txt {
+.received {
   float: left;
   display: block;
   width: 45%;
@@ -169,7 +169,7 @@ footer i {
   margin-bottom: 10px;
 }
 
-.user__txt {
+.sent {
   float: right;
   width: 45%;
   display: block;

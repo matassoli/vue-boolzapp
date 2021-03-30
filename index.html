@@ -71,16 +71,8 @@
 
       <div class="text__area">
 
-
-        <div v-for="item in contacts[contactActive].messages" class="user__txt">
+        <div v-for="item in contacts[contactActive].messages" :class="item.status">
           {{item.message }}
-          <div class="txt__date">30/03/2021 10:30:55</div>
-        </div>
-
-
-
-        <div class="contact__txt">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           <div class="txt__date">30/03/2021 10:30:55</div>
         </div>
 
