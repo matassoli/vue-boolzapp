@@ -211,3 +211,8 @@ footer i {
 .contacts__container a .contact:hover {
   background-color: #EAEAEA;
 }
+
+.active {
+  background-color: #EAEAEA;
+
+}

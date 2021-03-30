@@ -41,57 +41,53 @@
         <button><i class="fas fa-search"></i></button> <input placeholder="Cerca o inizia una nuova chat">
       </div>
 
-<div class="contacts__container">
-      <a href="#">
-        <div class="contacts">
-          <div v-for="(item, index) in contacts" class="contact">
-            <img v-bind:src="'img/avatar' + item.avatar + '.jpg'"><span>{{ item.name }}</span>
+      <div class="contacts__container">
+        <a href="#">
+          <div class="contacts">
+            <div v-for="(item, index) in contacts" @click="contactActive = index" class="contact" :class=" contactActive == index ? 'active' : ''">
+              <img :src="'img/avatar' + item.avatar + '.jpg'"><span>{{ item.name }}</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+
     </div>
-  </div>
 
     <div class="main__dx">
       <header>
         <div class="user">
-          <img src="img/avatar_1.jpg" alt="">
+          <img :src="'img/avatar' + contacts[contactActive].avatar + '.jpg'" alt="avatar">
           <div class="user__text">
-            <span>Michele</span>
+            <span>{{ contacts[contactActive].name }}</span>
             <span>Ultimo accesso oggi alle</span>
           </div>
         </div>
         <div class="icons">
-          <i class="fas fa-search"></i><i class="fas fa-paperclip"></i><i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fas fa-ellipsis-v"></i>
         </div>
       </header>
 
       <div class="text__area">
-        <div class="user__txt">
-          Ciaoooooooo
+
+
+        <div v-for="item in contacts[contactActive].messages" class="user__txt">
+          {{item.message }}
           <div class="txt__date">30/03/2021 10:30:55</div>
         </div>
+
+
+
         <div class="contact__txt">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           <div class="txt__date">30/03/2021 10:30:55</div>
         </div>
-        <div class="user__txt">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          <div class="txt__date">30/03/2021 10:30:55</div>
-        </div>
-        <div class="contact__txt">
-          heyy
-          <div class="txt__date">30/03/2021 10:30:55</div>
-        </div>
-        <div class="contact__txt">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dignissimos non accusamus ullam maxime numquam vitae debitis eaque et, inventore ipsam mollitia, necessitatibus totam ab, a expedita. Neque, at nihil.
-          <div class="txt__date">30/03/2021 10:30:55</div>
-        </div>
-        <div class="user__txt">
-          Boh!
-          <div class="txt__date">30/03/2021 10:30:55</div>
-        </div>
+
+
       </div>
+
+
 
       <footer>
         <i class="far fa-smile"></i>
@@ -102,10 +98,6 @@
       </footer>
 
     </div>
-
-
-
-
 
 
 
