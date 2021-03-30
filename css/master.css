@@ -167,7 +167,6 @@ footer i {
   border-radius: 10px;
   position: relative;
   margin-bottom: 10px;
-
 }
 
 .user__txt {
@@ -181,6 +180,7 @@ footer i {
   position: relative;
   margin-bottom: 10px;
 }
+
 .txt__date {
   position: absolute;
   bottom: 5px;
@@ -208,6 +208,6 @@ footer i {
   color: #000;
 }
 
-.contacts__container a .contact:active {
+.contacts__container a .contact:hover {
   background-color: #EAEAEA;
 }

@@ -17,7 +17,7 @@
 
       <header>
         <div class="user">
-          <img src="img/avatar_2.jpg" alt="">
+          <img src="img/avatar_io.jpg" alt="">
           <span>Nome Utente</span>
         </div>
         <div class="icons">
@@ -45,7 +45,7 @@
       <a href="#">
         <div class="contacts">
           <div v-for="(item, index) in contacts" class="contact">
-            <img v-bind:src="contacts[index].avatar"><span>{{ contacts[index].name }}</span>
+            <img v-bind:src="'img/avatar' + item.avatar + '.jpg'"><span>{{ item.name }}</span>
           </div>
         </div>
       </a>
