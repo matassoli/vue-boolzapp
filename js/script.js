@@ -82,5 +82,29 @@ var app = new Vue({
         ],
       },
     ],
+    newMsg: "",
+
   },
+  methods: {
+    // funzione per mandare messaggi
+    addMsg: function() {
+      if (this.newMsg !== "") {
+        this.contacts[this.contactActive].messages.push({
+          date: dayjs().format('DD/MM/YY HH.mm.ss'),
+          message: this.newMsg,
+          status: 'sent'
+        });
+        this.newMsg = '';
+        setTimeout(this.receivedMsg, 1000);
+      }
+    },
+    // funzione per ricevere messaggi
+    receivedMsg: function() {
+      this.contacts[this.contactActive].messages.push({
+        date: dayjs().format('DD/MM/YY HH.mm.ss'),
+        message: "Ok",
+        status: 'received'
+      });
+    },
+  }
 });

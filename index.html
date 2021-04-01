@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Vue ToDo List</title>
+  <title>Boolzapp</title>
   <link rel="stylesheet" href="css/master.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
 </head>
 
 <body>
   <main id="root">
 
     <div class="main__sx">
-
+      <!-- header con avatar e nome utente -->
       <header>
         <div class="user">
           <img src="img/avatar_io.jpg" alt="">
@@ -23,24 +24,22 @@
         <div class="icons">
           <i class="fas fa-circle-notch"></i><i class="fas fa-comment-alt"></i><i class="fas fa-ellipsis-v"></i>
         </div>
-
       </header>
-
+      <!-- barra azzurra notifiche -->
       <div class="notification">
         <div class="notification__icon">
           <i class="fas fa-bell-slash"></i>
         </div>
-
         <div class="notification__text">
           <span>Ricevi notifiche di nuovi messaggi</span>
           <span><a href="#">Attiva notifiche desktop</a></span>
         </div>
       </div>
-
+      <!-- barra ricerca -->
       <div class="search">
         <button><i class="fas fa-search"></i></button> <input placeholder="Cerca o inizia una nuova chat">
       </div>
-
+      <!-- colonna contatti selezionabili -->
       <div class="contacts__container">
         <a href="#">
           <div class="contacts">
@@ -50,11 +49,11 @@
           </div>
         </a>
       </div>
-
     </div>
 
     <div class="main__dx">
       <header>
+        <!-- header contatto selezionato -->
         <div class="user">
           <img :src="'img/avatar' + contacts[contactActive].avatar + '.jpg'" alt="avatar">
           <div class="user__text">
@@ -68,33 +67,26 @@
           <i class="fas fa-ellipsis-v"></i>
         </div>
       </header>
-
+      <!-- area messaggi -->
       <div class="text__area">
-
         <div v-for="item in contacts[contactActive].messages" :class="item.status">
           {{item.message }}
-          <div class="txt__date">30/03/2021 10:30:55</div>
+          <div class="txt__date">{{item.date}}</div>
         </div>
-
-
       </div>
-
-
-
+      <!-- footer con barra invio messaggio -->
       <footer>
         <i class="far fa-smile"></i>
-
-        <input type="text" placeholder="Scrivi un messaggio">
-
+        <input type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.13="addMsg">
         <i class="fas fa-microphone"></i>
       </footer>
 
     </div>
 
 
-
   </main>
   <script src="js/script.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </body>
 
 </html>
