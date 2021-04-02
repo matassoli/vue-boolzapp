@@ -37,13 +37,13 @@
       </div>
       <!-- barra ricerca -->
       <div class="search">
-        <button><i class="fas fa-search"></i></button> <input placeholder="Cerca o inizia una nuova chat">
+        <button><i class="fas fa-search"></i></button> <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat">
       </div>
       <!-- colonna contatti selezionabili -->
       <div class="contacts__container">
         <a href="#">
           <div class="contacts">
-            <div v-for="(item, index) in contacts" @click="contactActive = index" class="contact" :class=" contactActive == index ? 'active' : ''">
+            <div v-for="(item, index) in searchFilter" @click="contactActive = index" class="contact" :class=" contactActive == index ? 'active' : ''">
               <img :src="'img/avatar' + item.avatar + '.jpg'"><span>{{ item.name }}</span>
             </div>
           </div>

@@ -1,6 +1,10 @@
+
 var app = new Vue({
   el: "#root",
   data: {
+    newMsg: "",
+    search: "",
+    searchName: [],
     contactActive: 0,
     contacts: [{
         name: 'Michele',
@@ -40,7 +44,7 @@ var app = new Vue({
           {
             date: '20/03/2020 16:35:00',
             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-            status: 'received'
+            status: 'sent'
           }
         ],
       },
@@ -82,7 +86,7 @@ var app = new Vue({
         ],
       },
     ],
-    newMsg: "",
+
 
   },
   methods: {
@@ -106,5 +110,15 @@ var app = new Vue({
         status: 'received'
       });
     },
-  }
+  },
+  computed: {
+    searchFilter: function() {
+      return this.contacts.filter(item => {
+        if (this.search == "") {
+          return this.contacts;
+        }
+        return item.name.includes(this.search);
+      });
+    }
+  },
 });
