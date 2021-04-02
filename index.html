@@ -79,6 +79,10 @@
         <i class="far fa-smile"></i>
         <input type="text" placeholder="Scrivi un messaggio" v-model="newMsg" @keyup.13="addMsg">
         <i class="fas fa-microphone"></i>
+
+        <div class="emoji">
+          <span v-for="(item, index) in emoji" @click="emojiMsg(index)">{{item}}</span>
+        </div>
       </footer>
 
     </div>

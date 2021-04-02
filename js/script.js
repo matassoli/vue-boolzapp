@@ -4,6 +4,7 @@ var app = new Vue({
     newMsg: "",
     search: "",
     searchName: [],
+    emoji: ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", "😋", "😎", "😍", "😘", "🥰", "😴", "😙", "😭"],
     contactActive: 0,
     contacts: [{
         name: 'Michele',
@@ -109,7 +110,11 @@ var app = new Vue({
         status: 'received'
       });
     },
+    emojiMsg: function(e) {
+      this.newMsg += this.emoji[e];
+    },
   },
+  // filtro barra ricerca
   computed: {
     searchFilter: function() {
       return this.contacts.filter(e => {
