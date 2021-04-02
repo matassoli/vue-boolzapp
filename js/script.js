@@ -1,4 +1,3 @@
-
 var app = new Vue({
   el: "#root",
   data: {
@@ -113,11 +112,11 @@ var app = new Vue({
   },
   computed: {
     searchFilter: function() {
-      return this.contacts.filter(item => {
+      return this.contacts.filter(e => {
         if (this.search == "") {
           return this.contacts;
         }
-        return item.name.includes(this.search);
+        return e.name.toLowerCase().includes(this.search.toLowerCase());
       });
     }
   },
