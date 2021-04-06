@@ -126,3 +126,19 @@ var app = new Vue({
     }
   },
 });
+
+// Campanella notifiche
+var button = document.querySelectorAll("button")[0];
+button.addEventListener('click', function() {
+  if (button.getAttribute("data-text-swap") == button.innerHTML) {
+    button.innerHTML = button.getAttribute("data-text-original");
+    document.getElementById("notification__bell").classList.remove('fa-bell');
+    document.getElementById("notification__bell").classList.add('fa-bell-slash');
+
+  } else {
+    button.setAttribute("data-text-original", button.innerHTML);
+    button.innerHTML = button.getAttribute("data-text-swap");
+    document.getElementById("notification__bell").classList.remove('fa-bell-slash');
+    document.getElementById("notification__bell").classList.add('fa-bell');
+  }
+}, false);

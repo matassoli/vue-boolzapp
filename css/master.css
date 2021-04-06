@@ -101,10 +101,12 @@ header {
   color: #B1B1B1;
 }
 
-.notification__text a {
+.notification__text button {
   font-size: 10px;
   text-decoration: underline;
   opacity: 0.6;
+  margin-left: 10px;
+  background: none;
 }
 
 .search {
@@ -123,11 +125,15 @@ input {
   display: inline-block;
 }
 
-button {
+.search button {
   width: 18%;
   background-color: #FFF;
   padding: 5px 20px;
   margin-left: 5px;
+}
+
+#notification__button {
+  background: none;
 }
 
 footer {
@@ -236,6 +242,6 @@ footer i {
   cursor: pointer;
 }
 
-.fa-smile:hover ~ .emoji, .emoji:hover {
+.fa-smile:hover~.emoji, .emoji:hover {
   visibility: visible;
 }
